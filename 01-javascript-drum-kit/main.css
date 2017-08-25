@@ -21,10 +21,24 @@ h1 {
   margin: 1rem 1rem;
   background-color: hsl(210, 5%, 85%);
   box-shadow: 0 12px 24px hsla(222, 10%, 0%, 1);
-  transition: box-shadow, background-color 0.2s;
+  transition: all 0.1s;
   border-radius: 8px;
   padding: 1rem 1rem;
   flex: 0 0 auto;
+  cursor: pointer;
+}
+.pad:hover {
+  box-shadow: 0 8px 16px hsla(222, 10%, 0%, 1);
+  transform: scale(0.99);
+}
+.pad:active {
+  box-shadow: 0 8px 16px hsla(222, 10%, 0%, 1);
+  transform: scale(0.9);
+}
+.pad.playing {
+  background-color: hsl(210, 5%, 95%);
+  box-shadow: 0 24px 48px hsla(222, 10%, 0%, 0.5);
+  transform: scale(1.1);
 }
 .pad .key {
   display: block;
@@ -33,10 +47,12 @@ h1 {
   margin: 0 0 0.5rem;
   padding: 0.25rem;
   border-radius: 4px;
+  pointer-events: none;
 }
 .pad .drum {
   font-weight: bold;
   font-size: 1.1rem;
   color: hsl(210, 5%, 20%);
   margin: 0;
+  pointer-events: none;
 }
