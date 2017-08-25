@@ -10,4 +10,4 @@ My learning methodology throughout these exercises is to watch the video once th
 
 At the end of each challenge I am creating a note with any thoughts about the challenge. These notes may include new things I learned, problems I faces and how I solved them, or whatever thoughts I may have.
 
-### 01 JavaScript Drum Kit – 08.23.2017
+### 01 JavaScript Drum Kit
