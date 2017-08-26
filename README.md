@@ -4,6 +4,8 @@ Hi!
 
 These are my solutions to Wes Bos’ JavaScript30 Vanilla JS Challenges at [javascript30.com](https://javascript30.com)
 
+You can view my completed challenges here in this Codepen collection: https://codepen.io/collection/nrjNvY/
+
 
 ## Thoughts
 
