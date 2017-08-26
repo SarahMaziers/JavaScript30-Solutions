@@ -4,27 +4,30 @@
   const minuteHand = document.querySelector('.hand.minute');
   const secondHand = document.querySelector('.hand.second');
 
-  let currentTime, hoursStart, minutesStart, secondsStart;
+  let currentTime, hoursAngle, minutesAngle, secondsAngle, seconds, minutes, hours;
 
   startInterval(function(){
     // find the current time
     currentTime = new Date();
-    console.log(currentTime);
 
     // convert time to fraction of one full rotation around a circle
-    hoursRotation = currentTime.getHours() / 12;
-    minutesRotation = currentTime.getMinutes() / 60;
-    secondsRotation = currentTime.getSeconds() / 60;
+    seconds = currentTime.getSeconds()
+    minutes = currentTime.getMinutes() + seconds / 60;
+    hours = currentTime.getHours() + minutes / 60;
+
+    secondsAngle = currentTime.getSeconds() * 360 / 60;
+    minutesAngle = (currentTime.getMinutes() + seconds / 60) * 360 / 60;
+    hoursAngle = (currentTime.getHours() + minutes / 60) * 360 / 12;
 
     // set the hands' positions
-    setHandsRotation(hoursRotation, minutesRotation, secondsRotation);
+    setHandsAngle(hoursAngle, minutesAngle, secondsAngle);
 
   }, 1000)
 
-  function setHandsRotation(hour, minute, second) {
-    hourHand.style.transform = `rotate(${hour}turn)`;
-    minuteHand.style.transform = `rotate(${minute}turn)`;
-    secondHand.style.transform = `rotate(${second}turn)`;
+  function setHandsAngle(hour, minute, second) {
+    hourHand.style.transform = `rotate(${hour}deg)`;
+    minuteHand.style.transform = `rotate(${minute}deg)`;
+    secondHand.style.transform = `rotate(${second}deg)`;
   }
 
   function startInterval(callback, time) {
