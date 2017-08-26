@@ -9,17 +9,18 @@
   startInterval(function(){
     // find the current time
     currentTime = new Date();
+    console.log(currentTime);
 
     // convert time to fraction of one full rotation around a circle
-    hoursRotation = (1/48)*currentTime.getHours();
-    minutesRotation = (1/60)*currentTime.getMinutes();
-    secondsRotation = (1/60)*currentTime.getSeconds();
+    hoursRotation = currentTime.getHours() / 12;
+    minutesRotation = currentTime.getMinutes() / 60;
+    secondsRotation = currentTime.getSeconds() / 60;
 
     // set the hands' positions
     setHandsRotation(hoursRotation, minutesRotation, secondsRotation);
 
   }, 1000)
-  
+
   function setHandsRotation(hour, minute, second) {
     hourHand.style.transform = `rotate(${hour}turn)`;
     minuteHand.style.transform = `rotate(${minute}turn)`;
