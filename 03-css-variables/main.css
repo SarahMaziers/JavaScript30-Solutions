@@ -51,7 +51,7 @@ li {
 }
 .controls {
   background-color: hsla(222, 2%, 94%, 0.9);
-  padding: 1rem 4rem 1.5rem;
+  padding: 1rem 2rem 1.5rem;
   border-radius: 3px;
 }
 #roundness {
