@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Variables – Style the clock</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="clock">
+      <div class="outer-rim">
+        <div class="center-circle"></div>
+        <div class="face">
+          <div class="hand hour"></div>
+          <div class="hand minute"></div>
+          <div class="hand second"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <h3>Customize the clock: </h3>
+      <label for="roundness">Roundness</label>
+      <input id="roundness" type="range" name="roundness" min="0" max="10" value="2">
+
+      <ul>
+        <li>
+          <input id="default-theme" type="radio" name="theme" value="default" checked>
+          <label for="theme" type="checkbox">Default Theme</label>
+        </li>
+        <li>
+          <input id="alternate-theme" type="radio" name="theme" value="alternate">
+          <label for="theme" type="checkbox">Alternate Theme</label>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
