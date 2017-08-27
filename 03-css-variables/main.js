@@ -46,7 +46,7 @@
   themeControl.forEach(function(radioInput) {
     radioInput.addEventListener('click', changeTheme);
   })
-  
+
   function changeRoundness(e) {
     controls.style.setProperty('--clock-roundness', this.value);
   }
