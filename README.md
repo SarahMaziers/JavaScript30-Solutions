@@ -37,3 +37,7 @@ I made these controls:
 2. A radio button set to let the user change themes
 
 This was pretty straightforward. First I defined the CSS custom properties, designed both themes, and made sure that they worked if I changed the values of the custom properties. Then I wrote the markup for the controls. Then in the JavaScript, I selected the inputs elements and the root element containing my custom properties. I placed the themes in a JavaScript object, and attached event listeners to the input elements. From that point, it was as simple as looking up the properties and values in the themes object then using `style.setProperty` to change the value of the custom properties on the root element.
+
+### 04 Array Cardio Day 1 – 08.29.2017
+
+The first few of these array methods exercises were pretty easy, but I started struggling a bit towards the end, especially on the last problem. I cheated a bit to see how Wes did it. I had never used `Array.reduce` to reduce an array to an object before so I hadn't thought about that. That was pretty neat seeing how reduce can be used to build up an object, rather than simply reduce down to a single value. Reminds me to think outside the box a bit (an object is a single value in the sense that it is a single object);
